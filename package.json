@@ -1,0 +1,30 @@
+{
+	"homepage": "https://blog.sepezho.com",
+	"description": "Blog backend nodejs project",
+	"author": "sepezho",
+	"name": "Blog api",
+	"version": "2.0.0",
+	"license": "ISC",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.17.1",
+		"https": "^1.0.0",
+		"mysql": "^2.18.1",
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"ie 11",
+			"last 2 chrome version",
+			"last 2 firefox version",
+			"last 2 safari version"
+		]
+	}
+}
