@@ -6,7 +6,9 @@ const area = (app) => {
 		const id = req.body.id;
 		console.log(req);
 		pool.query("SELECT * FROM `POST` WHERE `Id` = " + id + ";", (_, resultsCom) => {
-			res.send(JSON.stringify({ status: "ok", data: resultsCom }));
+			pool.query("UPDATE `POST` SET `Views`=" + Number(resultsCom[0].Views ? Number(resultsCom[0].Views) + 1 : 1) + " WHERE `Id` = " + id + ";", (_1, __) => {
+				res.send(JSON.stringify({ status: "ok", data: resultsCom }));
+			});
 		});
 	});
 };
